@@ -7,6 +7,7 @@
 
 import os 
 import sqlite3
+import pandas as pd
 # sqlite for connecting to sqlite databases
 
 # An example of how to create a table, insert data
@@ -15,7 +16,7 @@ def do_databasse_stuff():
 
     conn = sqlite3.connect('tunes.db')
     cursor = conn.cursor()
-
+    
     # Create table
     cursor.execute('CREATE TABLE IF NOT EXISTS users (name TEXT, age INTEGER)')
 

@@ -61,7 +61,7 @@ For each ABC file:
 
 ## Part 2: Data Loading with Pandas (20%)
 
-### Load Data from MySQL
+### Load Data from SQLITE
 
 Create a function that loads the entire tunes table into a pandas DataFrame.
 
