@@ -135,3 +135,7 @@ class ABCParser:
         df = pd.read_sql("SELECT * FROM tunes", conn)
         conn.close()
         return df
+    
+    # Returns tunes from a specific book
+def get_tunes_by_book(df, book_number):
+    return df[df['book_number'] == book_number]
