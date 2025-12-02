@@ -160,4 +160,29 @@ def main():
         print("No tunes found!")
         return
     
+    # Step 2: Save to database
+    parser.save_to_database(tunes)
+    
+    # Step 3: Load for analysis
+    df = parser.load_tunes_from_database()
+    print(f" Success! Loaded {len(df)} tunes")
+    
+    # Step 4: Interactive query menu
+    while True:
+        print("\n1. Search by title")
+        print("2. Get by book number") 
+        print("3. Get by tune type")
+        print("4. Show all")
+        print("5. Exit")
+        
+        choice = input("Choose 1-5: ")
+        
+        if choice == '1':  # Search by title
+            term = input("Search title: ")
+            results = search_tunes(df, term)
+            print(f"Found {len(results)} tunes:")
+            for _, tune in results.iterrows():
+                print(f"  - {tune['title']} (Book {tune['book_number']})")
+            
+    
 
