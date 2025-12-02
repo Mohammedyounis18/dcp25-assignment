@@ -184,5 +184,29 @@ def main():
             for _, tune in results.iterrows():
                 print(f"  - {tune['title']} (Book {tune['book_number']})")
             
+        elif choice == '2':  # Filter by book
+            book = input("Book number: ")
+            results = get_tunes_by_book(df, int(book))
+            print(f"Book {book} has {len(results)} tunes:")
+            for _, tune in results.iterrows():
+                print(f"  - {tune['title']} ({tune['tune_type']})")
+            
+        elif choice == '3':  # Filter by tune type
+            t_type = input("Tune type: ")
+            results = get_tunes_by_type(df, t_type)
+            print(f"Found {len(results)} {t_type} tunes:")
+            for _, tune in results.iterrows():
+                print(f"  - {tune['title']} (Book {tune['book_number']})")
+            
+        elif choice == '4':  # Show all tunes
+            print(f"All {len(df)} tunes:")
+            for _, tune in df.iterrows():
+                print(f"  - {tune['title']} | Book {tune['book_number']} | {tune['tune_type']}")
+            
+        elif choice == '5':  # Exit
+            break
+
+if __name__ == "__main__"
+    main()
     
 
