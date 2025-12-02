@@ -144,3 +144,7 @@ def get_tunes_by_book(df, book_number):
 def get_tunes_by_type(df, tune_type):
     return df[df['tune_type'].str.contains(tune_type, case=False, na=False)]
 
+# Searches tunes by title
+def search_tunes(df, search_term):
+    return df[df['title'].str.contains(search_term, case=False, na=False)]
+
