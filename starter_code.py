@@ -139,3 +139,8 @@ class ABCParser:
     # Returns tunes from a specific book
 def get_tunes_by_book(df, book_number):
     return df[df['book_number'] == book_number]
+
+# Returns tunes of a specific type (e.g., jig, reel)
+def get_tunes_by_type(df, tune_type):
+    return df[df['tune_type'].str.contains(tune_type, case=False, na=False)]
+
