@@ -117,6 +117,7 @@ class ABCParser:
         cursor = conn.cursor()
         
         for tune in tunes:
+            # Table columns
             cursor.execute('''
                 INSERT INTO tunes (book_number, file_name, title, tune_type, key, meter, abc_notation) # Table columns
                 VALUES (?, ?, ?, ?, ?, ?, ?)
