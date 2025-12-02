@@ -148,3 +148,16 @@ def get_tunes_by_type(df, tune_type):
 def search_tunes(df, search_term):
     return df[df['title'].str.contains(search_term, case=False, na=False)]
 
+# Main program flow
+def main():
+    parser = ABCParser()
+    
+    print("=== ABC File Parser ===")
+    # Step 1: Parse all ABC files
+    tunes = parser.process_abc_directory()
+    
+    if not tunes:
+        print("No tunes found!")
+        return
+    
+
