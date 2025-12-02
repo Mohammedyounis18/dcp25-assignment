@@ -110,3 +110,21 @@ class ABCParser:
                         print(f"  - {file_name} -> {len(tunes)} tunes")
         
         return all_tunes
+    
+    # Saves all parsed tunes to the database
+    def save_to_database(self, tunes: list):
+        conn = sqlite3.connect(self.db_name)
+        cursor = conn.cursor()
+        
+        for tune in tunes:
+            cursor.execute('''
+                INSERT INTO tunes (book_number, file_name, title, tune_type, key, meter, abc_notation)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                tune['book_number'], tune['file_name'], tune['title'],
+                tune['tune_type'], tune['key'], tune['meter'], tune['abc_notation']
+            ))
+        
+        conn.commit()
+        conn.close()
+        print(f"Saved {len(tunes)} tunes to database")
