@@ -13,7 +13,7 @@ You will build an application in Python that:
 
 1. Reads ABC files from multiple folders (representing different books)
 2. Parses and stores tunes into a list of dictionaries
-3. Stores the data in a mysql database
+3. Stores the data in an sql database
 3. Loads data into pandas for analysis
 4. Create a simple user interface so that a user can query the data
 5. Maintains proper version control with Git/GitHub
@@ -55,30 +55,24 @@ abc_books/
 
 For each ABC file:
 1. Parse and load all tunes in the file (using logic from previous lab) into a list of dictionaries
-2. Insert each tune into a database table with the correct book number
+2. Insert each tune into a database table in SQLITE or MYSQL with the correct book number
 
 ---
 
 ## Part 2: Data Loading with Pandas (20%)
 
+<<<<<<< HEAD
 ### Load Data from SQLITE
+=======
+### Load Data from SQLITE or MYSQL
+>>>>>>> 28a6a772cfe54b4dedd22bda42db4392f3b410f1
 
 Create a function that loads the entire tunes table into a pandas DataFrame.
 
 ```python
-import pandas as pd
-import mysql.connector
 
-def load_tunes_from_database():
-    """Load all tunes from MySQL into DataFrame"""
-    conn = connect_to_database()
-    
-    query = "SELECT * FROM tunes"
     df = pd.read_sql(query, conn)
-    
-    conn.close()
-    return df
-```
+```    
 
 ### Create Analysis Functions
 
