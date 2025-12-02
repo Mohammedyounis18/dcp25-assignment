@@ -206,7 +206,7 @@ def main():
         elif choice == '5':  # Exit
             break
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()
     
 
