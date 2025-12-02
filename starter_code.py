@@ -128,3 +128,10 @@ class ABCParser:
         conn.commit()
         conn.close()
         print(f"Saved {len(tunes)} tunes to database")
+        
+    # Loads tunes from database into pandas DataFrame
+    def load_tunes_from_database(self):
+        conn = sqlite3.connect(self.db_name)
+        df = pd.read_sql("SELECT * FROM tunes", conn)
+        conn.close()
+        return df
