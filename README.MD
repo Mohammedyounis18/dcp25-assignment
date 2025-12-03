@@ -9,7 +9,8 @@ Student Number:
 C24372973
 
 # Screenshots
-
+pic1.png
+pic2.png
 # Description of the project
 This project is an ABC music file parser and analysis tool. It reads ABC notation files (a standard format for folk music notation), extracts tune information, stores it in a SQLite database, and provides an interactive interface for querying and analyzing the music data. The system can handle multiple "books" of tunes organized in folders.
 # Instructions for use
