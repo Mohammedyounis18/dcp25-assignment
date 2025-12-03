@@ -47,8 +47,6 @@ Key features:
 | assignment.md | Provided|
 | starter_code.py | Provided|
 
-# References
-
 # What I am most proud of in the assignment
 The program runs. It parses files, stores data in a database, and allows basic queries. It meets the technical requirements.
 
