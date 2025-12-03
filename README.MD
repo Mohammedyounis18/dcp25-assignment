@@ -48,7 +48,7 @@ Key features:
 | abc_books/ | Provided dataset |
 | README.md | Self written |
 | assignment.md | Provided|
-| starter_code.py | Provided|
+| starter_code.py | Self written|
 
 # What I am most proud of in the assignment
 The program runs. It parses files, stores data in a database, and allows basic queries. It meets the technical requirements.
