@@ -14,7 +14,7 @@ C24372973
 # Description of the project
 This project is an ABC music file parser and analysis tool. It reads ABC notation files (a standard format for folk music notation), extracts tune information, stores it in a SQLite database, and provides an interactive interface for querying and analyzing the music data. The system can handle multiple "books" of tunes organized in folders.
 # Instructions for use
-1. Ensure you have Python 3.x installed
+1. Ensure you have Python installed
 2. Install required packages: `pip install pandas`
 3. Place your ABC files in the `abc_books` folder (with numbered subfolders 0, 1, 2, etc.)
 4. Run the program: `python main.py`
@@ -23,6 +23,8 @@ This project is an ABC music file parser and analysis tool. It reads ABC notatio
    - Filter by book number
    - Filter by tune type (jig, reel, etc.)
    - View all tunes in the database
+
+
 
 # How it works:
 the program follows a three-step process:
